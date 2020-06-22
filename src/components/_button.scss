@@ -99,17 +99,7 @@
     // Default Solid Styles
     //
     color: clr-auto($button-theme);
-
     @include gradient-background($button-theme, 180deg);
-
-    @include hover-focus-active {
-      border-color: currentColor;
-      background: transparent;
-    }
-
-    &.is-loading {
-      @include loading-spinner-color(clr-auto($button-theme));
-    }
 
     @include button-design-fillout-variant($button-theme); // Default button theme
 
@@ -118,6 +108,15 @@
       &.is-#{$color} {
         @include button-design-fillout-variant($value);
       }
+    }
+
+    @include hover-focus-active {
+      border-color: currentColor;
+      background: transparent;
+    }
+
+    &.is-loading {
+      @include loading-spinner-color(clr-auto($button-theme));
     }
 
     @include disabled {

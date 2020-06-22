@@ -70,6 +70,8 @@
   // to avoid adding extra color override
   // - clr-auto($button-theme) is already inside default is-solid button
   color: if(clr-auto($color) != clr-auto($button-theme), clr-auto($color), null);
+  border-color: $color;
+  @include gradient-background($color, 180deg)
 
   @include hover {
     color: $color;
